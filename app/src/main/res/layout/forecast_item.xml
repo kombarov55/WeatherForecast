@@ -11,58 +11,44 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         android:text="Thu"
-        android:textSize="45dp"
+        android:textSize="15sp"
         android:layout_margin="5dp"
         />
 
     <TextView
-        android:id="@+id/forecast_item_min_label"
+        android:id="@+id/forecast_item_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toRightOf="@id/forecast_item_date"
+        app:layout_constraintLeft_toLeftOf="@id/forecast_item_date"
         app:layout_constraintBaseline_toBaselineOf="@id/forecast_item_date"
-        android:layout_marginLeft="25dp"
-        android:text="min"
+        app:layout_constraintRight_toRightOf="parent
+"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:text="Blowing Snow"
         android:textSize="15sp"/>
 
     <TextView
         android:id="@+id/forecast_item_min"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toRightOf="@+id/forecast_item_min_label"
-        app:layout_constraintBaseline_toBaselineOf="@id/forecast_item_min_label"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/forecast_item_date"
+
+        app:layout_constraintHorizontal_bias="0.98"
         android:layout_marginLeft="8dp"
         android:text="15"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/forecast_item_max_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toRightOf="@id/forecast_item_date"
-        app:layout_constraintBottom_toTopOf="@id/forecast_item_min_label"
-        android:layout_marginLeft="25dp"
-        android:text="max"
-        android:textSize="15sp"/>
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/forecast_item_max"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toRightOf="@+id/forecast_item_max_label"
-        app:layout_constraintBaseline_toBaselineOf="@id/forecast_item_max_label"
-        android:layout_marginLeft="8dp"
-        android:text="21"
-        android:textSize="20sp"/>
-
-    <TextView
-        android:id="@+id/forecast_item_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toRightOf="@+id/forecast_item_min"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBaseline_toBaselineOf="@id/forecast_item_date"
-        android:layout_marginLeft="15dp"
-        android:text="Blowing Snow"
-        android:textSize="20sp"/>
+        app:layout_constraintHorizontal_bias="0.92"
+        android:text="21"
+        android:textSize="15sp"/>
 
 </android.support.constraint.ConstraintLayout>
