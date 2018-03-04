@@ -9,8 +9,6 @@ import android.widget.ListView
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var fab: FloatingActionButton
-
     private lateinit var forecastDataHandler: ForecastDataHandler
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,13 +24,6 @@ class MainActivity : AppCompatActivity() {
         findViewById<ListView>(R.id.forecast_listview)
                 .setAdapter(ForecastAdapter(forecastDataHandler.forecastItems, layoutInflater))
 
-
-
-        fab = findViewById(R.id.forecast_layout_fab)
-    }
-
-    override fun onStart() {
-        super.onStart()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

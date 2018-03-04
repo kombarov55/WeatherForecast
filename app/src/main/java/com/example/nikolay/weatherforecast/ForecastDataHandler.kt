@@ -9,19 +9,32 @@ import org.json.JSONObject
 class ForecastDataHandler(json: String) {
     private val query: JSONObject = JSONObject(json).getJSONObject("query")
 
-    private val item: JSONObject = query
+    private val channel: JSONObject = query
             .getJSONObject("results")
             .getJSONObject("channel")
-            .getJSONObject("item")
 
-    val creationDate = query.getString("created")
-    val forecastItems: List<ForecastItem> = item
+    private val location = channel.getJSONObject("location")
+
+
+    val creationDate: String = query.getString("created")
+
+    val city: String = location.getString("city")
+    val country: String = location.getString("country")
+    val region: String = location.getString("region")
+
+
+    val forecastItems: List<ForecastItem> = channel
+            .getJSONObject("item")
             .getJSONArray("forecast")
             .map {
                 ForecastItem(
+                        date = it.getString("date"),
                         day = it.getString("day"),
-                        high = it.getString("high"),
-                        low = it.getString("low"),
+                        high = farenheitToCelsium(it.getString("high")),
+                        low = farenheitToCelsium(it.getString("low")),
                         text = it.getString("text"))
             }
+
+    fun getTodayForecast(): ForecastItem? = forecastItems[0]
+
 }

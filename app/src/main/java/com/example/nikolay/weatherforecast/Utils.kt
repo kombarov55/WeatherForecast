@@ -32,3 +32,9 @@ fun fileToString(fileInputStream: InputStream): String {
 
     return sb.toString()
 }
+
+fun farenheitToCelsium(temperature: Int): Float = (temperature - 32).toFloat() * (5F / 9F)
+
+fun farenheitToCelsium(temperature: String): String = trunc1(farenheitToCelsium(temperature.toInt()).toString())
+
+private fun trunc1(numAsStr: String): String = numAsStr.substring(0, numAsStr.indexOf(".") + 2)

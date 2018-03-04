@@ -28,6 +28,17 @@
         android:textSize="15sp"/>
 
     <TextView
+        android:id="@+id/forecast_item_max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/forecast_item_date"
+        app:layout_constraintHorizontal_bias="0.861"
+        android:text="21"
+        android:textSize="15sp"/>
+
+    <TextView
         android:id="@+id/forecast_item_min"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -38,17 +49,7 @@
         app:layout_constraintHorizontal_bias="0.98"
         android:layout_marginLeft="8dp"
         android:text="15"
-        android:textSize="15sp" />
-
-    <TextView
-        android:id="@+id/forecast_item_max"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBaseline_toBaselineOf="@id/forecast_item_date"
-        app:layout_constraintHorizontal_bias="0.92"
-        android:text="21"
-        android:textSize="15sp"/>
+        android:textSize="15sp"
+        android:textColor="#969696"/>
 
 </android.support.constraint.ConstraintLayout>
