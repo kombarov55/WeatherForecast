@@ -50,6 +50,6 @@
         android:layout_marginLeft="8dp"
         android:text="15"
         android:textSize="15sp"
-        android:textColor="#969696"/>
+        android:textColor="@color/lighterFont"/>
 
 </android.support.constraint.ConstraintLayout>
