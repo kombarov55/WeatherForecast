@@ -37,4 +37,4 @@ fun farenheitToCelsium(temperature: Int): Float = (temperature - 32).toFloat() *
 
 fun farenheitToCelsium(temperature: String): String = trunc1(farenheitToCelsium(temperature.toInt()).toString())
 
-private fun trunc1(numAsStr: String): String = numAsStr.substring(0, numAsStr.indexOf(".") + 2)
+fun trunc1(numAsStr: String): String = numAsStr.substring(0, numAsStr.indexOf(".") + 2)

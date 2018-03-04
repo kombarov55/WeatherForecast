@@ -30,8 +30,8 @@ class ForecastDataHandler(json: String) {
                 ForecastItem(
                         date = it.getString("date"),
                         day = it.getString("day"),
-                        high = farenheitToCelsium(it.getString("high")),
-                        low = farenheitToCelsium(it.getString("low")),
+                        high = farenheitToCelsium(it.getInt("high")),
+                        low = farenheitToCelsium(it.getInt("low")),
                         text = it.getString("text"))
             }
 

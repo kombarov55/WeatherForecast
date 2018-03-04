@@ -21,8 +21,8 @@ class ForecastAdapter(
         val x = xs[i]
 
         resultView.findViewById<TextView>(R.id.forecast_item_date).text = x.day
-        resultView.findViewById<TextView>(R.id.forecast_item_max).text = x.high
-        resultView.findViewById<TextView>(R.id.forecast_item_min).text = x.low
+        resultView.findViewById<TextView>(R.id.forecast_item_max).text = trunc1(x.high.toString())
+        resultView.findViewById<TextView>(R.id.forecast_item_min).text = trunc1(x.low.toString())
         resultView.findViewById<TextView>(R.id.forecast_item_text).text = x.text
 
         return resultView
