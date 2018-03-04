@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/forecast_item_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Thu"
+        android:textSize="45dp"
+        android:layout_margin="5dp"
+        />
+
+    <TextView
+        android:id="@+id/forecast_item_min_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/forecast_item_date"
+        app:layout_constraintBaseline_toBaselineOf="@id/forecast_item_date"
+        android:layout_marginLeft="25dp"
+        android:text="min"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/forecast_item_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/forecast_item_min_label"
+        app:layout_constraintBaseline_toBaselineOf="@id/forecast_item_min_label"
+        android:layout_marginLeft="8dp"
+        android:text="15"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/forecast_item_max_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/forecast_item_date"
+        app:layout_constraintBottom_toTopOf="@id/forecast_item_min_label"
+        android:layout_marginLeft="25dp"
+        android:text="max"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/forecast_item_max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/forecast_item_max_label"
+        app:layout_constraintBaseline_toBaselineOf="@id/forecast_item_max_label"
+        android:layout_marginLeft="8dp"
+        android:text="21"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/forecast_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/forecast_item_min"
+        app:layout_constraintBaseline_toBaselineOf="@id/forecast_item_date"
+        android:layout_marginLeft="15dp"
+        android:text="Blowing Snow"
+        android:textSize="20sp"/>
+
+</android.support.constraint.ConstraintLayout>
