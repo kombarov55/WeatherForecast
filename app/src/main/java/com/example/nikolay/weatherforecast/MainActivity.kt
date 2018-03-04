@@ -1,17 +1,13 @@
 package com.example.nikolay.weatherforecast
 
-import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.ListView
-import com.example.nikolay.weatherforecast.model.ForecastItem
 
 class MainActivity : AppCompatActivity() {
-
-    //54.191263,37.6138233
 
     private lateinit var fab: FloatingActionButton
 
@@ -37,10 +33,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-
-        fab.setOnClickListener({
-            startActivity(Intent("VIEW_MY_ACTIVITY"))
-        })
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
